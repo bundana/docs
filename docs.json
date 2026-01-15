@@ -1,13 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Sendazi API Documentation",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
   "favicon": "/images/1.png",
+  "logo": "/images/2.png",
   "navigation": {
     "tabs": [
       {
@@ -20,17 +21,6 @@
               "quickstart",
               "development"
             ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
           }
         ]
       },
@@ -38,18 +28,45 @@
         "tab": "API Reference",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Overview",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Campaigns",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/sms-campaigns",
+              "api-reference/voice-campaigns"
+            ]
+          },
+          {
+            "group": "Contacts & Groups",
+            "pages": [
+              "api-reference/contacts",
+              "api-reference/groups"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "api-reference/sender-ids",
+              "api-reference/message-templates"
+            ]
+          },
+          {
+            "group": "User & Billing",
+            "pages": [
+              "api-reference/wallet",
+              "api-reference/security"
+            ]
+          },
+          {
+            "group": "Developer",
+            "pages": [
+              "api-reference/api-keys",
+              "api-reference/dashboard",
+              "api-reference/payments"
             ]
           }
         ]
@@ -58,24 +75,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Dashboard",
+          "href": "https://dashboard.sendazi.com",
+          "icon": "grid"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "mailto:hello@sendazi.com",
+          "icon": "life-ring"
         }
       ]
     }
   },
-  "logo": "/images/2.png",
   "navbar": {
     "links": [
       {
@@ -85,8 +96,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Go to Dashboard",
+      "href": "https://dashboard.sendazi.com"
     }
   },
   "footer": {
