@@ -1,33 +1,64 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
+description: "Overview of the Sendazi API and how to authenticate"
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  This section documents the Sendazi API using an OpenAPI specification.
+  All endpoints shown in the API Reference are generated directly from the spec.
 </Note>
 
-## Welcome
+## Welcome to the Sendazi API
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The **Sendazi API** allows developers to send **SMS and Voice campaigns**, manage contacts and groups, configure sender IDs, and track billing — all programmatically.
+
+The API is designed for:
+- Marketing and bulk messaging platforms
+- Transactional notifications
+- CRM and ERP integrations
+- Custom messaging workflows
+
+Sendazi API documentation is powered by an **OpenAPI 3.1 specification**, which enables an interactive API playground and up-to-date endpoint references.
+
+---
+
+## OpenAPI Specification
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Sendazi API Specification"
+  icon="code"
+  href="https://github.com/sendazi/docs/blob/main/openapi/sendazi.yaml"
 >
   View the OpenAPI specification file
 </Card>
 
+> Any change to the OpenAPI file is automatically reflected in the API Reference.
+
+---
+
+## Base URL
+
+All API requests are made against the following base URL:
+
+```http
+https://api.sendazi.com/api/v1
+
+```
+
+
+---
+
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All Sendazi API endpoints are secured using **Bearer Token Authentication**.
 
-```json
+Include your API token in the `Authorization` header of every request:
+
+```http
+Authorization: Bearer YOUR_API_TOKEN
+
 "security": [
   {
     "bearerAuth": []
   }
 ]
-```
