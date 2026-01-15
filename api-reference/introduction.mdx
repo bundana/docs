@@ -1,38 +1,37 @@
 ---
 title: "Introduction"
-description: "Overview of the Sendazi API and how to authenticate"
+description: "Overview of the Sendazi API and authentication"
 ---
 
 <Note>
-  This section documents the Sendazi API using an OpenAPI specification.
-  All endpoints shown in the API Reference are generated directly from the spec.
+  This documentation provides a complete reference for integrating with the Sendazi API.
+  All endpoints are defined and maintained in a single OpenAPI specification to ensure accuracy and consistency.
 </Note>
 
 ## Welcome to the Sendazi API
 
-The **Sendazi API** allows developers to send **SMS and Voice campaigns**, manage contacts and groups, configure sender IDs, and track billing — all programmatically.
+The **Sendazi API** enables developers to programmatically send **SMS and Voice campaigns**, manage contacts and groups, configure sender IDs, and monitor usage and billing.
 
-The API is designed for:
-- Marketing and bulk messaging platforms
-- Transactional notifications
-- CRM and ERP integrations
-- Custom messaging workflows
+It is designed for reliable, high-volume messaging use cases, including:
 
-Sendazi API documentation is powered by an **OpenAPI 3.1 specification**, which enables an interactive API playground and up-to-date endpoint references.
+- Marketing and bulk messaging platforms  
+- Transactional and notification systems  
+- CRM and ERP integrations  
+- Custom communication workflows  
+
+The API follows standard REST principles and uses JSON for all requests and responses.
 
 ---
 
-## OpenAPI Specification
+## API Specification
 
 <Card
   title="Sendazi API Specification"
   icon="code"
   href="https://github.com/sendazi/docs/blob/main/openapi/sendazi.yaml"
 >
-  View the OpenAPI specification file
+  View the OpenAPI specification
 </Card>
-
-> Any change to the OpenAPI file is automatically reflected in the API Reference.
 
 ---
 
@@ -42,23 +41,16 @@ All API requests are made against the following base URL:
 
 ```http
 https://api.sendazi.com/api/v1
-
 ```
-
-
----
 
 ## Authentication
 
-All Sendazi API endpoints are secured using **Bearer Token Authentication**.
+All Sendazi API endpoints require Bearer Token authentication.
+Include your API token in the Authorization header for every request:
 
-Include your API token in the `Authorization` header of every request:
+```Authorization: Bearer YOUR_API_TOKEN
+```
+Authentication is enforced globally across all endpoints.
 
-```http
-Authorization: Bearer YOUR_API_TOKEN
+🔐 API tokens grant full access to your account. Store them securely and never expose them in client-side applications.
 
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
